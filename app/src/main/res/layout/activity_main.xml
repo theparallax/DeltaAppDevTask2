@@ -23,10 +23,10 @@
         android:layout_height="wrap_content"
         android:text="Speak"
         android:id="@+id/SpeechBtn"
+        android:onClick="onSpeechBtnClick"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="52dp"
-        android:onClick="onSpeechBtnClick" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="26dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,5 +36,56 @@
         android:layout_above="@+id/imageView"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="48dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="L"
+        android:id="@+id/LeftBtnID"
+        android:layout_below="@+id/upBtnID"
+        android:layout_alignParentStart="true"
+        android:onClick="OnLeftBtnClick" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R"
+        android:id="@+id/RightBtnID"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/DownBtnID"
+        android:onClick="OnRightBtnClick" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DWN"
+        android:id="@+id/DownBtnID"
+        android:layout_alignBaseline="@+id/SpeechBtn"
+        android:layout_alignBottom="@+id/SpeechBtn"
+        android:layout_toEndOf="@+id/LeftBtnID"
+        android:onClick="OnDownBtnClick" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UP"
+        android:id="@+id/upBtnID"
+        android:layout_above="@+id/DownBtnID"
+        android:layout_toEndOf="@+id/LeftBtnID"
+        android:onClick="OnUpBtnClick" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CanvasView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="onRightBtnClick" />
 
 </RelativeLayout>
